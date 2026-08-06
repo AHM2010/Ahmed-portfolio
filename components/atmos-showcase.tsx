@@ -7,48 +7,50 @@ import { ProjectImageSlider } from "./project-image-slider";
 import { Badge, ButtonLink } from "./ui";
 
 const features = [
-  "Authentication",
-  "Dashboard analytics",
-  "Customer management",
-  "Customer details",
-  "Deals pipeline",
-  "Task management",
-  "Settings",
+  "Live weather conditions",
+  "Location search",
+  "Multi-day forecasts",
+  "Weather analytics",
+  "City comparison",
+  "Interactive weather map",
+  "Arabic interface",
+  "Unit preferences",
   "Responsive design",
   "Dark mode",
-  "TypeScript",
-  "Accessibility",
-  "Reusable components",
+  "Accessible controls",
+  "Loading and error states",
 ];
-const tech = ["Next.js", "TypeScript", "Tailwind CSS", "Recharts"];
-const crmImages = [
+
+const tech = ["React", "TypeScript", "Tailwind CSS", "Weather API", "Charts"];
+
+const atmosImages = [
   {
-    src: "/screenshots/nexora-dashboard.png",
-    alt: "Nexora CRM analytics dashboard",
+    src: "/screenshots/atmos-dashboard-overview.png",
+    alt: "Atmos weather dashboard showing current conditions in dark mode",
   },
   {
-    src: "/screenshots/nexora-customers.png",
-    alt: "Nexora CRM customer management page",
+    src: "/screenshots/atmos-forecast.png",
+    alt: "Atmos responsive weather forecast on a mobile screen",
   },
   {
-    src: "/screenshots/nexora-customer-details.png",
-    alt: "Nexora CRM customer details page",
+    src: "/screenshots/atmos-analytics-overview.png",
+    alt: "Atmos weather analytics and forecast trends",
   },
   {
-    src: "/screenshots/nexora-deals-dark.png",
-    alt: "Nexora CRM deals pipeline in dark mode",
+    src: "/screenshots/atmos-comparison-mode.png",
+    alt: "Atmos weather analytics and city comparison view",
   },
   {
-    src: "/screenshots/nexora-tasks.png",
-    alt: "Nexora CRM task management page",
+    src: "/screenshots/atmos-weather-map.png",
+    alt: "Atmos interactive weather map",
   },
   {
-    src: "/screenshots/nexora-settings.png",
-    alt: "Nexora CRM settings page",
+    src: "/screenshots/atmos-arabic-dashboard.png",
+    alt: "Atmos Arabic interface and weather preferences",
   },
 ] as const;
 
-export function CrmShowcase() {
+export function AtmosShowcase() {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const reduceMotion = useReducedMotion();
 
@@ -56,21 +58,22 @@ export function CrmShowcase() {
     <article className="grid overflow-hidden rounded-[30px] border border-[#d5c9aa] bg-[#eee8d9] p-5 text-[#272820] shadow-soft md:p-10 lg:grid-cols-[.9fr_1.1fr] lg:gap-12 lg:p-12 dark:border-transparent dark:bg-[#1b1d18] dark:text-[#f2f2ec]">
       <div>
         <p className="text-xs font-bold uppercase tracking-widest text-[#8a6515] dark:text-[#dbb557]">
-          Flagship case study · In development
+          Featured case study · Live project
         </p>
         <h3 className="mt-4 font-display text-5xl leading-none">
-          CRM Dashboard
+          Atmos Weather Dashboard
         </h3>
         <p className="mt-4 text-[#55574f] dark:text-[#c4c6bd]">
-          A scalable workspace concept for helping small teams understand their
-          pipeline, manage customer relationships, and keep daily work moving.
+          A responsive weather workspace that turns live conditions, forecasts,
+          maps, and comparisons into a clear experience for planning ahead.
         </p>
         <h4 className="mb-2 mt-7 text-xs font-bold uppercase tracking-widest text-[#8a6515] dark:text-[#dbb557]">
           Project overview
         </h4>
         <p className="text-[#5e6058] dark:text-[#bcbeb6]">
-          The planned interface brings analytics, contacts, deals, and tasks
-          into a consistent system with typed data and reusable components.
+          Atmos brings current conditions, forecast trends, weather analytics,
+          and location-based exploration into one polished dashboard that works
+          across languages, themes, and screen sizes.
         </p>
         <div className="mt-5 flex flex-wrap gap-2">
           {tech.map((item) => (
@@ -79,14 +82,14 @@ export function CrmShowcase() {
         </div>
         <div className="mt-6 flex flex-wrap gap-2">
           <ButtonLink
-            href="https://nexora-crm-one.vercel.app/"
+            href="https://atmos-weather-dashboard-swart.vercel.app/"
             variant="contact"
             external
           >
             Live demo
           </ButtonLink>
           <ButtonLink
-            href="https://github.com/AHM2010/nexora-crm"
+            href="https://github.com/AHM2010/atmos-weather-dashboard"
             variant="contact"
             external
           >
@@ -101,7 +104,7 @@ export function CrmShowcase() {
               key={feature}
             >
               <FiCheckCircle
-                className="text-[#9a7119] dark:text-[#d9ad45]"
+                className="shrink-0 text-[#9a7119] dark:text-[#d9ad45]"
                 aria-hidden
               />
               {feature}
@@ -110,8 +113,8 @@ export function CrmShowcase() {
         </ul>
       </div>
       <ProjectImageSlider
-        images={crmImages}
-        galleryLabel="Nexora CRM project screenshots"
+        images={atmosImages}
+        galleryLabel="Atmos Weather Dashboard project screenshots"
         priority
         aspectClassName="aspect-16/10"
         className="mt-9 self-center rounded-[20px] border border-[#cbbd99] bg-[#ddd4bd] shadow-2xl lg:mt-0 dark:border-[#363a31] dark:bg-[#0d0f0c]"
@@ -121,7 +124,7 @@ export function CrmShowcase() {
           className="flex w-full items-center justify-between text-left font-bold"
           type="button"
           aria-expanded={detailsOpen}
-          aria-controls="crm-case-study-details"
+          aria-controls="atmos-case-study-details"
           onClick={() => setDetailsOpen((open) => !open)}
         >
           {detailsOpen ? "Hide case-study details" : "Read case-study details"}
@@ -133,7 +136,7 @@ export function CrmShowcase() {
         <AnimatePresence initial={false}>
           {detailsOpen && (
             <motion.div
-              id="crm-case-study-details"
+              id="atmos-case-study-details"
               className="overflow-hidden"
               initial={reduceMotion ? false : { height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
@@ -151,26 +154,29 @@ export function CrmShowcase() {
                 transition={{ duration: 0.25 }}
               >
                 <p>
-                  <b>Problem</b> Customer information, deal progress, and tasks
-                  can become fragmented across separate tools.
+                  <b>Problem</b> Weather data is often spread across
+                  disconnected views, making it harder to compare places or
+                  understand how conditions will change.
                 </p>
                 <p>
-                  <b>Solution</b> A unified, responsive dashboard concept with
-                  clear navigation and shared interface patterns.
+                  <b>Solution</b> A unified dashboard with clear forecasts,
+                  interactive analytics, map exploration, and preferences that
+                  adapt the experience to each user.
                 </p>
                 <p>
-                  <b>What I’m learning</b> Typed application structure,
-                  dashboard information hierarchy, reusable components, and
-                  accessibility.
+                  <b>What I learned</b> Working with asynchronous weather data,
+                  data visualization, localization, and responsive information
+                  design for both quick checks and deeper analysis.
                 </p>
                 <p>
-                  <b>Challenges</b> Keeping dense business data understandable
-                  across desktop and mobile layouts.
+                  <b>Challenges</b> Presenting dense, changing data clearly
+                  while keeping charts, maps, themes, and mobile layouts
+                  consistent.
                 </p>
                 <p>
-                  <b>Future improvements</b> Complete authentication, connect
-                  persistent data, add testing, and validate the workflows with
-                  users.
+                  <b>Future improvements</b> Add saved locations, severe-weather
+                  alerts, offline-friendly caching, and broader automated test
+                  coverage.
                 </p>
               </motion.div>
             </motion.div>

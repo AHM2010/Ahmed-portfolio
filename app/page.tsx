@@ -11,6 +11,7 @@ import {
 import { BackToTop } from "@/components/back-to-top";
 import { ContactCards } from "@/components/contact-cards";
 import { CrmShowcase } from "@/components/crm-showcase";
+import { AtmosShowcase } from "@/components/atmos-showcase";
 import { Header } from "@/components/header";
 import { Reveal } from "@/components/motion";
 import { ProjectExplorer } from "@/components/project-explorer";
@@ -106,9 +107,14 @@ export default function Home() {
             title="Projects with purpose."
             intro="Filter the collection by technology, then open any case study for the decisions, challenges, and next steps behind it."
           >
-            <Reveal>
-              <CrmShowcase />
-            </Reveal>
+            <div className="grid gap-6 md:gap-8">
+              <Reveal>
+                <CrmShowcase />
+              </Reveal>
+              <Reveal>
+                <AtmosShowcase />
+              </Reveal>
+            </div>
             <ProjectExplorer />
           </Section>
           <Section

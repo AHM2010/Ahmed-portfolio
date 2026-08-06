@@ -45,9 +45,9 @@ export function ProjectCard({
             </ButtonLink>
           )}
           {project.githubUrl && (
-            <ButtonLink href={project.githubUrl} variant="text" external>
+            <ButtonLink href={project.githubUrl} variant="secondary" external>
               <FiGithub />
-              Source
+              GitHub repo
             </ButtonLink>
           )}
         </div>

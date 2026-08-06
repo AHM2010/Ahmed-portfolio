@@ -59,6 +59,7 @@ export const projects: Project[] = [
       "Responsive checkout",
     ],
     liveUrl: "https://electro-one.vercel.app/",
+    githubUrl: "https://github.com/AHM2010/electro",
   },
   {
     title: "Dahab Desserts",
@@ -98,6 +99,7 @@ export const projects: Project[] = [
     categories: ["Frontend"],
     features: ["Category filtering", "Responsive menu", "Delivery CTA"],
     liveUrl: "https://ahm2010.github.io/Dahab-Desserts/",
+    githubUrl: "https://github.com/AHM2010/Dahab-Desserts",
   },
   {
     title: "Task List",
@@ -129,6 +131,7 @@ export const projects: Project[] = [
     categories: ["Frontend"],
     features: ["Local persistence", "Task states", "Responsive layout"],
     liveUrl: "https://ahm2010.github.io/TO-DO-list-web-app/",
+    githubUrl: "https://github.com/AHM2010/TO-DO-list-web-app",
   },
   {
     title: "Advice Me",
@@ -160,6 +163,7 @@ export const projects: Project[] = [
     categories: ["React", "Frontend"],
     features: ["API integration", "Loading feedback", "Accessible controls"],
     liveUrl: "https://ahm2010.github.io/advice-me/",
+    githubUrl: "https://github.com/AHM2010/advice-me",
   },
 ];
 
