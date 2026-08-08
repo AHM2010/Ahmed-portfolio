@@ -26,24 +26,20 @@ export const projects: Project[] = [
       "Add automated tests, stronger empty and error states, and a backend-powered checkout flow.",
     images: [
       {
-        src: "/screenshots/electro-app-screen.png",
-        alt: "Electro e-commerce product listing page",
+        src: "/screenshots/electro-cover.png",
+        alt: "Electro storefront landing screenshot",
       },
       {
-        src: "/screenshots/electro-phones.png",
-        alt: "Electro e-commerce phones category",
+        src: "/screenshots/electro-storefront-desktop.png",
+        alt: "Electro desktop storefront layout",
       },
       {
         src: "/screenshots/electro-product-details.png",
         alt: "Electro product details page",
       },
       {
-        src: "/screenshots/electro-product-details2.png",
-        alt: "Electro product details with purchasing options",
-      },
-      {
-        src: "/screenshots/electro-cart.png",
-        alt: "Electro shopping cart",
+        src: "/screenshots/electro-cart-drawer.png",
+        alt: "Electro cart drawer overview",
       },
       {
         src: "/screenshots/electro-checkout.png",
