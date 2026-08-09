@@ -306,12 +306,12 @@ function ProjectImageSliderComponent({
         <span className="pointer-events-none absolute right-3 top-3 z-10 rounded-full bg-ink/70 px-2.5 py-1 text-[.65rem] font-bold tabular-nums text-white opacity-0 backdrop-blur-xs transition-opacity duration-300 group-hover/slider:opacity-100 group-focus-within/slider:opacity-100 motion-reduce:transition-none [@media(hover:none)]:opacity-100">
           {current + 1} / {images.length}
         </span>
-        <FullscreenButton
-          buttonRef={fullscreenButton}
-          onClick={() => setFullscreenOpen(true)}
-          imageAlt={currentImage.alt}
-          className="right-3 top-12"
-        />
+      <FullscreenButton
+        buttonRef={fullscreenButton}
+        onClick={() => setFullscreenOpen(true)}
+        imageAlt={currentImage.alt}
+        className="left-3 top-3 lg:left-auto lg:right-3 lg:top-12"
+      />
         <span className="sr-only" aria-live="polite" aria-atomic="true">
           Showing image {current + 1} of {images.length}
         </span>
@@ -341,13 +341,13 @@ function FullscreenButton({
   buttonRef,
   onClick,
   imageAlt,
-  className = "right-3 top-3",
+  className = "left-3 top-3 lg:left-auto lg:right-3",
 }: FullscreenButtonProps) {
   return (
     <button
       ref={buttonRef}
       type="button"
-      className={`pointer-events-none absolute z-20 grid size-9 scale-95 place-items-center rounded-full border border-white/25 bg-ink/70 text-white opacity-0 shadow-lg backdrop-blur-xs transition-[opacity,transform,background-color,color] duration-300 hover:scale-105 hover:bg-gold hover:text-ink focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white group-hover:pointer-events-auto group-hover:scale-100 group-hover:opacity-100 group-hover/slider:pointer-events-auto group-hover/slider:scale-100 group-hover/slider:opacity-100 group-focus-within:pointer-events-auto group-focus-within:scale-100 group-focus-within:opacity-100 group-focus-within/slider:pointer-events-auto group-focus-within/slider:scale-100 group-focus-within/slider:opacity-100 motion-reduce:transition-none [@media(hover:none)]:pointer-events-auto [@media(hover:none)]:scale-100 [@media(hover:none)]:opacity-100 ${className}`}
+      className={`pointer-events-auto absolute z-20 grid size-8 scale-100 place-items-center rounded-full border border-white/25 bg-ink/75 text-sm text-white opacity-100 shadow-lg backdrop-blur-xs transition-[opacity,transform,background-color,color] duration-300 hover:scale-105 hover:bg-gold hover:text-ink focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white motion-reduce:transition-none lg:pointer-events-none lg:size-9 lg:scale-95 lg:bg-ink/70 lg:text-base lg:opacity-0 lg:group-hover:pointer-events-auto lg:group-hover:scale-100 lg:group-hover:opacity-100 lg:group-hover/slider:pointer-events-auto lg:group-hover/slider:scale-100 lg:group-hover/slider:opacity-100 lg:group-focus-within:pointer-events-auto lg:group-focus-within:scale-100 lg:group-focus-within:opacity-100 lg:group-focus-within/slider:pointer-events-auto lg:group-focus-within/slider:scale-100 lg:group-focus-within/slider:opacity-100 ${className}`}
       onClick={onClick}
       aria-label={`View ${imageAlt} in fullscreen`}
       title="View fullscreen"
